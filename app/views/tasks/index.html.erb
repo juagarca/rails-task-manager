@@ -5,11 +5,13 @@
     <% @tasks.each do |task| %>
       <li>
         <% if task.completed %>
-          <input type="checkbox" id="checkbox1" name="checkbox1" value="Completed" checked>
+          <input type="checkbox" id="checkbox1" name="checkbox1" value="Completed" checked onclick="return false;">
           <%= link_to task.title, task_path(task) %>
+          <%= link_to '🗑', task_delete_path(task), method: :delete %>
         <% else %>
-          <input type="checkbox" id="checkbox2" name="checkbox2" value="Completed">
+          <input type="checkbox" id="checkbox2" name="checkbox2" value="Completed" onclick="return false;">
           <%= link_to task.title, task_path(task) %>
+          <%= link_to '🗑', task_delete_path(task), method: :delete %>
         <% end %>
       </li>
     <% end %>

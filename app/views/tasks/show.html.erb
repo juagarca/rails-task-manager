@@ -1,20 +1,24 @@
 <h1><%= @task.title %></h1>
 
-<%= link_to '✏️ Edit this task', task_edit_path %>
-
 <div class="details">
   <%= @task.details %>
-</div>
+</div> <br>
 
 <form action="">
   <% if @task.completed %>
-    <input type="checkbox" id="checkbox1" name="checkbox1" value="Completed" checked>
+    <input type="checkbox" id="checkbox1" name="checkbox1" value="Completed" checked onclick="return false;">
     <label for="checkbox1"> This task is completed</label>
   <% else %>
-    <input type="checkbox" id="checkbox2" name="checkbox2" value="Completed">
+    <input type="checkbox" id="checkbox2" name="checkbox2" value="Completed" onclick="return false;">
     <label for="checkbox2"> This task is not completed yet</label>
   <% end %>
 </form>
+<br>
+
+<div class="button">
+  <%= link_to '✏️ Edit this task', task_edit_path %>
+</div>
+<br>
 
 <%= link_to '🔙 to list', tasks_path %>
 

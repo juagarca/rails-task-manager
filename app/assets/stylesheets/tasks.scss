@@ -1,3 +1,27 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+a {
+  text-decoration: none;
+  color: #749ED3;
+}
+
+.button {
+  border: 1px solid black;
+  width: 130px;
+  background-color: #749ED3;
+  color: white;
+  padding: 5px 2px;
+}
+
+.button a {
+  color: white;
+}
+
+input[type="submit" i] {
+  border: 1px solid black;
+  width: 130px;
+  background-color: #749ED3;
+  color: white;
+  padding: 10px 5px;
+}
